@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App with Filters</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+      
+        
+    <div class="container">
+
+            <div class="logo">
+                <img src="weather_icon.png" class="img-logo" alt=""><br>
+                <p class="weather">Weather</p>
+                <hr class="line">
+                <img src="notify.png" class="img-logo" alt=""><br>
+                <img src="location.png" class="img-logo" alt=""><br>
+                <img src="calender.png" class="img-logo" alt=""><br>
+                <img src="setting.png" class="img-logo" alt=""><br>
+                <img src="user.png" class="user-logo" alt=""><br>
+               
+            </div>
+    
+
+    
+       
+       <div class="spinner" id="loading-spinner" style="display: none;"></div>
+
+
+       <div class="widget">
+
+        <div class="date-div">
+            <div id="current-date" class="date-display"></div>
+            <input type="text" name="search" id="search-bar" placeholder="Search a city">
+        </div>
+    
+         
+
+           
+
+
+    <div class="chart-container">
+    
+   
+            <div class="weather-data">
+                <p id="data-heading">Weather</p>
+                <div class="icon-weather">
+                    <img id="weather-icon" src="" alt=""/>
+                </div>
+                <p class="temperature"><span id="temperature"></span><span id="unit-display">°C</span></p>
+                <p class="weather-description"><span id="weather-description"></span></p>
+                <hr class="line2">
+                <p class="humidity">Humidity <span id="humidity"></span>%</p>
+            </div>
+        
+        
+
+          
+
+            <div class="cards">
+
+               
+                <div class="card-1">
+                    <p class="highlight">Next 5 Days</p>
+                    <canvas id="weatherChart" ></canvas>
+
+                    
+                </div>
+     
+                <div class="card-2">
+     
+                    <canvas id="weatherConditionChart">Doughnut Chart</canvas>
+                   
+                </div>
+     
+                <div class="card-3">
+     
+                    <canvas id="temperatureLineChart" >Line Chart</canvas>
+     
+                </div>
+
+            </div>
+
+          
+    </div>
+
+        <!-- Tables section -->
+
+        <div class="heading-container">
+            <p id="forecast">5 Days Forecast</p>
+            <div class="chatbot-header">Chatbot</div>
+
+        </div>
+        
+
+        <div class="filter-container">
+            <img id="filter-icon-btn" class="filter-icon" src="filter.png" alt="">
+            <div id="filter-dropdown" class="filter-dropdown">
+                <select id="filter-select-dropdown" title="Choose">
+                    <option value="default">Select</option>
+                    <option value="ascending">Temperatures Ascending</option>
+                    <option value="descending">Temperatures Descending</option>
+                    <option value="rain">Days with Rain</option>
+                    <option value="highest">Day with Highest Temperature</option>
+                </select>
+            </div>
+        </div>
+
+        
+
+        <div class="chart-container">
+            
+
+            <div class="table-card">
+
+                <table id="forecast-table">
+                    <thead>
+                        <tr>
+                            <th id="data">Date</th>
+                            <th>Temperature (°C)</th>
+                            <th id="condition">Condition</th>
+                        </tr>
+                    </thead>
+                    <tbody id="weather-body"></tbody>
+                </table>
+
+            </div>
+           
+            
+        
+            <div class="chat-card">
+                
+
+                <!-- Chatbot section -->
+                <div class="chatbot-container" >
+                    
+                    <div class="chatbot-messages" id="chatbot-messages"></div>
+                    <div class="chatbot-input">
+                        <input type="text" id="chat-input" placeholder="Ask me anything...">
+                       
+                    </div>
+                </div>
+
+            </div>
+
+       </div>
+
+
+   
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

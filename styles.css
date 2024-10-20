@@ -1,0 +1,714 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+    background-color: #191B1F;
+
+}
+
+
+.card-1, .card-2, .card-3{
+
+
+    
+    background-color: rgb(19, 15, 37);
+    
+    opacity: 0.5;
+    width: 240px;
+    height: 250px;
+    border-radius: 30px;
+    margin-top: 40px;
+    margin-left: 0;
+  
+
+
+}
+
+.table-card{
+
+    display: flex;
+    background-color: #2f2f38c9;
+    width: 400px;
+    height: 500px;
+    border-radius: 30px;
+
+    margin-left: 0;
+
+
+}
+
+#forecast-table {
+   
+    width:400px;
+      
+}
+
+
+.chat-card{
+
+    width: 750px;
+    height: 500px;
+    border-radius: 30px;
+    margin-left: 10px;
+    
+
+}
+
+
+
+.highlight{
+   
+    height: 20px;
+    position: relative;
+    bottom: 60px;
+    font-size: 20px;
+    color: white;
+}
+
+
+.cards{
+    display: flex;
+    background-color: #2f2f38c9;
+    gap: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-radius: 20px;
+    color: white;
+    flex-wrap: nowrap;
+    margin-left: 15px;
+}
+
+
+
+.weather-data{
+    background-color: #2f2f38c9;
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+
+}
+
+
+
+.chart-container{
+
+    border-radius: 40px;
+    display: flex;
+    gap: 10px;
+   
+}
+
+#search-bar {
+    color: white;
+    opacity: 0.8;
+    padding: 10px;
+    width: 300px;
+    border-radius: 20px;
+    border: none;
+    background-color: #2f2f38c9;
+  
+    margin-bottom: 20px;
+    outline: none;
+}
+
+#search-bar:focus {
+    background-color: #2c3e50; 
+    border: none;
+    outline: none; 
+}
+
+
+#search-bar:hover {
+    background-color: #2c3e50;
+}
+
+#search-bar::placeholder {
+    color: white; 
+    opacity: 0.7;  
+}
+
+
+
+
+.container {
+    display: flex;
+}
+
+
+
+.logo {
+    color: #ecf0f1;
+    font-size: 20px;
+    margin-bottom: 20px;
+    background-color: #2f2f38c9;
+    height: 1085px;
+    margin-left: 20px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    margin-top: 17px;
+}
+.weather{
+    font-size: 15px;
+}
+.hidden {
+    display: none;
+}
+
+
+.filter-container {
+    position: relative;
+    display: inline-block;
+}
+
+.filter-icon {
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    height: 50px;
+    margin-left: 350px;
+    margin-bottom: 5px;
+
+}
+
+
+.filter-dropdown {
+    display: none;  
+    position: absolute;
+    top: 40px;
+   left: 185px;
+   
+}
+
+#filter-select-dropdown{
+
+    border-radius: 30px;
+    background-color: #2f2f38c9;
+    color: white;
+    border: none;
+    padding: 2px;
+    
+}
+
+
+.filter-dropdown.show {
+    display: block;
+}
+
+
+
+.line{
+    opacity:0.1;
+}
+
+.widget {
+    display: block;
+    padding: 20px;
+}
+
+#data-heading{
+
+    padding-top: 40px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.temperature, .humidity, .wind-speed, .weather-description, #data-heading {
+ 
+    margin-bottom: 10px;
+    color: white;
+    padding-left: 40px;
+    
+    
+    
+}
+
+
+
+.data {
+    background-color: rgb(148, 231, 234);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+canvas {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+}
+
+
+
+#stats, #forecast, #unit{
+
+    color: white;
+}
+
+#stats, #forecast, #data-heading{
+
+    font-size: 20px;
+}
+
+.line2{
+    opacity:0.1;
+    width: 300px;
+    margin-top: 20px;
+}
+
+.icon-weather{
+
+    margin-left: 20px;
+}
+
+.weather-description, .humidity{
+
+    opacity: 0.7;
+}
+
+.temperature{
+
+    
+    font-size: 25px;
+}
+
+
+
+
+th, td {
+    
+    padding: 8px;
+    text-align: center;
+    color: white;
+}
+
+
+#data{
+    border-top-left-radius: 30px;
+}
+
+#condition{
+    border-top-right-radius: 30px;
+    
+}
+
+
+
+
+
+
+.spinner {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db; 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+ 
+ .chatbot-container {
+   
+    
+    width: 780px;
+    height: 500px;
+    background-color: #2f2f38c9;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+
+}
+.chatbot-header {
+   
+    color: white;
+    font-size: 20px;
+    margin-left: 290px;
+    position: relative;
+    top: 55px;
+
+    
+}
+.chatbot-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 390px;
+    color: white;
+}
+.chatbot-input {
+    display: flex;
+    padding: 10px;
+}
+
+
+
+.chatbot-input input {
+  
+    border-radius: 4px;
+    width: 650px;
+   
+    border-radius: 30px;
+    border: none;
+    background-color: #5c493f;
+    color: white;
+    align-items: center;
+}
+
+
+#chat-input{
+
+    padding: 15px;
+    outline: none;
+}
+
+
+#chat-input::placeholder{
+
+    color: white;
+    opacity: 0.7;
+}
+
+
+
+
+#forecast{
+
+    position:relative;
+    top: 35px;
+    margin-left: 10px;
+}
+
+
+#forecast-table td, #forecast-table th {
+    padding: 10px;
+    text-align: center;
+}
+
+#forecast-table img {
+    width: 50px;
+    height: 50px;
+}
+
+
+body{
+    background-color: rgb(19, 15, 37);
+}
+
+
+.heading-container{
+
+    display: flex;
+}
+
+
+.img-logo{
+
+    width: 21px;
+    height: 21px;
+    margin-top: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+   
+}
+
+.user-logo{
+
+    margin-top: 660px;
+    width: 22px;
+    height: 22px;
+    margin-left: 15px;
+}
+
+
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+.weather-data, .logo, .cards, .table-card, .chatbot-container, #search-bar {
+    background: linear-gradient(-45deg,#191B1F, #2c3b53,#4d3f38);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+}
+  
+
+.separator {
+    border-bottom: 1px solid #ccc; 
+    opacity: 0.1; 
+    width: 310px;
+    margin: 0 auto; 
+}
+
+#forecast-table thead {
+    display: none;
+}
+
+.user-message {
+    background-color: rgb(19, 15, 37);
+    color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 20px;
+    max-width: 300px; 
+    width: fit-content;
+    margin-left: auto; 
+    margin-right: 0; 
+    margin-bottom: 10px; 
+    margin-top: 30px;
+}
+
+.bot-message {
+    background-color: #5c493f;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 20px;
+    max-width: 320px; 
+    width: fit-content;
+    margin-left: 0; 
+    margin-right: auto; 
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.chatbot-container{
+    padding: 0 65px;
+}
+
+
+
+
+.date-display{
+
+    color: white;
+    font-size: 20px;
+    margin-top: 15px;
+   
+}
+
+#search-bar{
+
+   margin-left: 680px;
+}
+
+.date-div{
+
+    display: flex;
+}
+
+
+#weatherConditionChart{
+
+    width: 180px !important;
+    height: 200px !important;
+    margin-top: 15px;
+}
+
+#weatherChart{
+
+    width: 180px !important;
+    height: 130px !important;
+
+   
+}
+
+
+#temperatureLineChart{
+
+   
+    margin-top: 80px !important;
+   
+   
+}
+
+
+
+@media (max-width: 600px) {
+    
+    .container {
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 100%;
+        height: auto; 
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .widget, .cards, .table-card, .chat-card, .chatbot-container {
+        width: 100%;
+        margin: 0;
+    }
+
+   
+    .card-1, .card-2, .card-3 {
+        width: 100%; 
+        height: auto; 
+        margin-top: 20px;
+    }
+
+    
+    .chatbot-container {
+        padding: 10px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .chart-container {
+        flex-direction: column;
+    }
+
+    .date-div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #search-bar {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+   
+    #forecast-table {
+        font-size: 14px;
+        width: 100%;
+    }
+
+  
+    .filter-icon {
+        margin-left: 0;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .chatbot-messages {
+        max-height: 250px; 
+    }
+
+   
+    .user-message, .bot-message {
+        max-width: 100%;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 100%;
+        height: auto;
+    }
+
+    .widget, .table-card, .chat-card, .chatbot-container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+    }
+
+   
+    .card-1, .card-2, .card-3 {
+        width: 100%;
+        height: auto;
+    }
+
+    .chatbot-container {
+        width: 100%;
+    }
+
+    #forecast-table {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .filter-icon {
+        margin-left: 0;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .chatbot-messages {
+        max-height: 300px;
+    }
+
+
+    .user-message, .bot-message {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1025px) {
+    
+   
+    
+    .cards {
+        flex-wrap: nowrap;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    
+    .chatbot-container {
+        width: 750px;
+    }
+
+   
+    .table-card, .chat-card {
+        width: 400px;
+    }
+
+    .user-message, .bot-message {
+        max-width: 320px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

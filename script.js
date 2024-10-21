@@ -1,8 +1,11 @@
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    const apiKey = '65846212fbcdcba8b2f3947eddb2878f';
-    const geminiApiKey = 'AIzaSyCLrusnwDZCRRyw_fWy_dJYLhVjzhGwnxQ';
+    const apiKey = 'Enter your Api key here';
+
+    //if you wish to fetch non weather related queries you will use gemini but i have not used gemini for non-weather related queries.
+    //I have only implemented weather related queries.
+    const geminiApiKey = 'Enter your gemini key here';  
     let originalData = []; 
     
  
